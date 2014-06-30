@@ -1,0 +1,25 @@
+application: aftonhencky
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /stylesheets
+  static_dir: aaa/stylesheets
+- url: /scripts
+  static_dir: aaa/scripts
+- url: /.*
+  script: main.application
+
+libraries:
+
+- name: django
+  version: "1.5"
+- name: PIL
+  version: "1.1.7"
+env_variables:
+  DJANGO_SETTINGS_MODULE: 'aaa.settings'
+
+builtins:
+- django_wsgi: on
