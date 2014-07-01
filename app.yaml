@@ -9,6 +9,8 @@ handlers:
   static_dir: aaa/stylesheets
 - url: /scripts
   static_dir: aaa/scripts
+- url: /images
+  static_dir: aaa/images
 - url: /.*
   script: main.application
 
