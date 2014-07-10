@@ -14,15 +14,21 @@ a {
 	outline: none;
 }
 
+h1 {
+	opacity: .7;
+	font-family: 'Lato';
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: 3.5em;
+}
+
 h2 {
-	font-family: 'Lato', sans-serif;
-	color: darkslateblue;
-	padding-left: 10%;
-	padding-top: 5%
+	font-family: 'Lato';
+	color: darkblue;
+	padding-top: 8%;
 }
 
 p {
-	padding: 0 10%;
 	margin-top: 5%;
 }
 
@@ -30,11 +36,13 @@ section {
 	background: lightgray;
 	height: 100vh;
 	border-bottom: 1px solid lightslategray;
+	padding: 0 10%;
 }
 
 section p {
 	color: darkslategray;
 	line-height: 1.8;
+	font-size: 1.1em;
 }
 
 /** ----Home Screen Settings --- **/
@@ -48,14 +56,14 @@ section p {
 }
 
 #hero {
-	flex: 80%;
+	flex: 60%;
 	width: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 }
 
-#bottom-nav{
+#bottom-nav, #top{
 	flex: 20%;
 	height: 20%;
 	width: 100%;
@@ -63,35 +71,19 @@ section p {
 	flex-direction: column;
 	justify-content: center;
 	background-color: white;
+}
+
+.border{
 	border-bottom: 1px solid lightslategray;
 }
 
-.bg-img{
-	background-image: url("/images/Optimized-mt_tam_hike2.png");
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-	z-index: 1;
-}
 
 #splash{
 	width: 100%;
-	font-family: 'Lato', sans-serif;
-	text-transform: uppercase;
-	font-size: 3em;
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+	justify-content: space-around;
 }
-
-h1.first-name{
-	opacity: .7;
-}
-
-h1.last-name{
-	opacity: .7;
-}
-
 
 
 /* --- Navigation Settings --- */
@@ -110,8 +102,14 @@ nav li {
 }
 
 nav li a {
-	color: lightslategray;
+	color: darkslategray;
 	text-transform: uppercase;
+	font-size: 1.1em;
+	font-family: 'Lato';
+}
+
+a:hover{
+	color: darkblue;
 }
 
 .fixed {
@@ -120,8 +118,62 @@ nav li a {
     z-index: 7;
 }
 
+i {
+	color: darkslategray;
+}
+
+i:hover{
+	color: darkblue;
+}
+
+.fa-arrow-circle-o-up {
+	margin-top: 5%;
+}
 
 
+@media screen and (min-width: 500px) and (max-width: 600px){
+	h1 {
+		font-size: 2.5em;
+	}
 
+	h2 {
+		font-size: 1.3em;
+	}
+
+	nav li a {
+		font-size: 1em;
+	}
+
+	section {
+		padding: 0 5%;
+	}
+
+	section p {
+		font-size: 1em;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	h1 {
+		font-size: 2em;
+	}
+
+	h2 {
+		font-size: 1.1em;
+	}
+
+	nav li a {
+		font-size: .9em;
+	}
+
+	section {
+		padding: 0 3%;
+	}
+
+	section p {
+		font-size: .9em;
+	}
+
+}
 
 
