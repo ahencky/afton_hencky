@@ -30,9 +30,9 @@
 	<nav>
 		<ul>
 			<li><a href="http://www.linkedin.com/pub/afton-hencky/53/422/88"><i class="fa fa-linkedin-square fa-2x"></i></a></li>
-			<li><a href="mailto:ahencky@gmail.com"><i class="fa fa-envelope-square fa-2x"></i></a></li>
-			<li><a href="http://www.github.com/ahencky"><i class="fa fa-github-square fa-2x"></i></a></li>
-			<li><a href="http://instagram.com/ahencky"><i class="fa fa-instagram fa-2x"></i></a></li>
+			<li><a href="mailto:ahencky@gmail.com" target="_blank"><i class="fa fa-envelope-square fa-2x"></i></a></li>
+			<li><a href="http://www.github.com/ahencky" target="_blank"><i class="fa fa-github-square fa-2x"></i></a></li>
+			<li><a href="http://instagram.com/ahencky" target="_blank"><i class="fa fa-instagram fa-2x"></i></a></li>
 		</ul>
 	</nav>
 </div>
@@ -47,9 +47,9 @@
 <div id="bottom-nav" class="border">
     <nav id="menu">
         <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#resume">Resume</a></li>
+            <li><a id ="about-link" href="#about" class="navLink">About</a></li>
+            <li><a id ="projects-link" href="#projects" class="navLink">Projects</a></li>
+            <li><a id ="resume-link" href="#resume" class="navLink">Resume</a></li>
         </ul>
     </nav>
 </div>
@@ -60,37 +60,41 @@
 <section id="about">
 	<h2>About</h2>
 	<p>
-	Hello! I'm Afton, a Smith College alum and queer techie living in the Bay Area. I'm a technology enthusiast with  experience in web development and user support. I've previously worked as an IT assistant with the Danish Institute for Study Abroad in Copenhagen and as a copy editor for <span class="italic">Metamorphoses</span>, a 5-college journal for literary translations. I hold a B.A in Psychology, with strong skills in research, writing, and editing.
+	Hello! I'm Afton, a Smith College alumna and queer techie living in the Bay Area. Welcome to my web project portfolio page. I'm a technology enthusiast with  experience in web development and user support. My web skills include HTML, CSS, Python, Django, Git/SVN, JavaScript/jQuery, and hacking around on WordPress. I've previously worked as an IT assistant with the Danish Institute for Study Abroad in Copenhagen and as a copy editor & production intern for <span class="italic">Metamorphoses</span>, a 5-college journal for literary translations. I hold a B.A in Psychology, with strong skills in research, writing, and editing.
 	</p>
 	<p>
-	I'm currently seeking professional opportunities in the Bay Area. Check out my resume and <span><a href="http://www.linkedin.com/pub/afton-hencky/53/422/88">LinkedIn</a></span> profile and feel free to <span><a href="mailto:ahencky@gmail.com">contact me.</a></span>
+	I'm currently seeking professional opportunities in the Bay Area. Check out my resume and <span><a href="http://www.linkedin.com/pub/afton-hencky/53/422/88">LinkedIn</a></span> profile and feel free to <span><a href="mailto:ahencky@gmail.com">contact me </a></span>with inquiries.
 	</p>
 	<a href="#home" class="arrow"><i class="fa fa-arrow-circle-o-up fa-2x"></i></a>
 </section>
 
 <section id="projects">
 	<h2>Projects</h2>
-	<h3><a href="http://tlc.dis.dk" target="blank">TLC - the Teaching and Learning Center</a></h3>
+	<h3><a href="http://tlc.dis.dk" target="blank">TLC - the Teaching and Learning Center 
+		<i class="fa fa-angle-double-right"></i>
+	</a></h3>
 	<p> A microsite built with Django during my internship with the Danish Institute for Study Abroad in Copenhagen. The site is used to host information, resources and newsletters for DIS faculty and academic staff. Content is managed by staff through Django's admin interface. 
 	</p>
 
-	<h3><a href="http://disabroad.org/student-life/study-abroad-blogs" target="blank">
-		Student Blogger Page for DIS</a></h3>
+	<h3><a href="http://disabroad.org/student-life/study-abroad-blogs" target="blank">Student Blogger Page for DIS
+	<i class="fa fa-angle-double-right"></i>
+	</a></h3>
 	<p> A Django app RSS feed aggregator using the python feedburner library. The page updates with blog posts from students' individual blogs.
 	</p>
 
-	<h3><a href="http://ahencky.github.io/GAproject/tuner.html" target="blank">
-		Tuner - SoundCloud API project</a></h3>
+	<h3><a href="http://ahencky.github.io/GAproject/tuner.html" target="blank">Tuner - SoundCloud API project
+	<i class="fa fa-angle-double-right"></i>
+	</a></h3>
 	<p> My project during General Assembly's front-end web development course finds music on SoundCloud using their API to filter songs based on search criteria. 
 	</p>
 	<a href="#home" class="arrow"><i class="fa fa-arrow-circle-o-up fa-2x"></i></a>
 </section>
 
 <section id="resume">
-	<h2>Resum&eacute</h2>
+	<h2>Resume</h2>
 	<p>
 		<a href="https://docs.google.com/document/d/1QghuNpD9pddd6rSWZyWWhBCxZxdhy99tYU7E3kE8ISQ/edit" target="blank">
-		<i class="fa fa-external-link"></i> View my Resum&eacute on Google Docs &#8482
+		<i class="fa fa-external-link"></i> View my Resume on Google Docs &#8482
 		</a>
 	</p>
 	<p>
@@ -105,7 +109,7 @@
 <footer>
 	<div>
 	<p>
-		&copy;Afton Hencky 2014
+		Last Updated July 2014
 	</p>
 	<p>
 		This is a Django site running on Google App Engine
@@ -115,5 +119,23 @@
 </footer>
 
 <script async src="../scripts/home.js"></script>
+
+<!-- Highlight current section in top navigation -->
+<script type="text/javascript">
+var navLinks = document.querySelectorAll('.navLink');
+
+function changeSection(e) {
+	for(var i=0 ; i<navLinks.length ; i++){
+		navLinks[i].classList.remove('active');
+	}
+	this.classList.add('active');
+}
+
+for(var i=0 ; i<navLinks.length ; i++){
+  navLinks[i].addEventListener('click', changeSection);
+}
+
+
+</script>
 </body>
 </html>

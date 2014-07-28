@@ -55,7 +55,7 @@ section#projects {
 
 section#resume {
 	background: lightgray;
-	height: 45vh;
+	height: 50vh;
 	border-bottom: 1px solid lightslategray;
 	padding: 0 8%;	
 }
@@ -172,6 +172,11 @@ nav li a {
 	text-transform: uppercase;
 	font-size: 1.1em;
 	font-family: 'Lato';
+}
+
+.active {
+	text-decoration: underline;
+	color: darkblue;
 }
 
 a:hover{
