@@ -1,7 +1,7 @@
 '''
 Created on Jan 17, 2014
 
-@author: Afton
+@author: Afton Hencky
 '''
 
 import django.core.handlers.wsgi

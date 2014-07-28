@@ -11,6 +11,8 @@ handlers:
   static_dir: aaa/scripts
 - url: /images
   static_dir: aaa/images
+- url: /files
+  static_dir: aaa/files  
 - url: /.*
   script: main.application
 
