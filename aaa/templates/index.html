@@ -8,12 +8,33 @@
 			background-size: cover;
 			background-position: left;
 			z-index: 1;
-			transition: background-image 1s ease-in-out;
+			transition: background-image 2s ease-in-out;
+			-webkit-transition: background-image 2s ease-in-out;
 		}
 
 		.bg-img:hover{
 			background-image: url("/images/Optimized-mt_tam_hike.png");
+		}
+		@-webkit-keyframes blurFadeIn{
+			0%{
+				opacity: 0;
+				text-shadow: 0px 0px 40px #fff;
+				-webkit-transform: scale(1.3);
+			}
+			50%{
+				opacity: 0.5;
+				text-shadow: 0px 0px 10px #fff;
+				-webkit-transform: scale(1.1);
+			}
+			100%{
+				opacity: 1;
+				text-shadow: 0px 0px 1px #fff;
+				-webkit-transform: scale(1);
+			}
+		}
 
+		h1 {
+			-webkit-animation: blurFadeIn 2s ease-in 1s backwards;
 		}
 	</style>
 	<meta name="viewport" content="width=device-width">
@@ -60,10 +81,10 @@
 <section id="about">
 	<h2>About</h2>
 	<p>
-	Hello! I'm Afton, a Smith College alumna and queer techie living in the Bay Area. Welcome to my web project portfolio page. I'm a technology enthusiast with  experience in web development and user support. My web skills include HTML, CSS, Python, Django, Git/SVN, JavaScript/jQuery, and hacking around on WordPress. I've previously worked as an IT assistant with the Danish Institute for Study Abroad in Copenhagen and as a copy editor & production intern for <span class="italic">Metamorphoses</span>, a 5-college journal for literary translations. I hold a B.A in Psychology, with strong skills in research, writing, and editing.
+	Hello! I'm Afton, a Smith College alumna and "techie" living in the Bay Area. I'm a technology enthusiast with  experience in web development and user support. My web skills include HTML, CSS, Python, Django, Git/SVN, JavaScript/jQuery, and a little WordPress. I have a basic understanding of relational databases and SQL. I'm always trying to learn new skills and I'm a big fan of online education platforms such as Coursera. I've previously worked as an IT assistant with the Danish Institute for Study Abroad in Copenhagen and recently completed General Assembly's front-end web development course. In addition to solid tech. skills I hold a B.A in Psychology, with strong skills in research, writing, and editing.
 	</p>
 	<p>
-	I'm currently seeking professional opportunities in the Bay Area. Check out my resume and <span><a href="http://www.linkedin.com/pub/afton-hencky/53/422/88">LinkedIn</a></span> profile and feel free to <span><a href="mailto:ahencky@gmail.com">contact me </a></span>with inquiries.
+	I'm currently seeking professional opportunities in the Bay Area. Check out my <span><a href="https://docs.google.com/document/d/1QghuNpD9pddd6rSWZyWWhBCxZxdhy99tYU7E3kE8ISQ/edit" target="blank">resume</a></span> and <span><a href="http://www.linkedin.com/pub/afton-hencky/53/422/88">LinkedIn</a></span> profile and feel free to <span><a href="mailto:ahencky@gmail.com">contact me </a></span>with inquiries.
 	</p>
 	<a href="#home" class="arrow"><i class="fa fa-arrow-circle-o-up fa-2x"></i></a>
 </section>
@@ -102,6 +123,11 @@
 			<i class="fa fa-file-pdf-o"></i>  View as PDF
 		</a>
 	</p>	
+	<p>
+		<a href="http://www.linkedin.com/pub/afton-hencky/53/422/88">
+		<i class="fa fa-linkedin-square"></i>  View on LinkedIn
+	</a>
+	</p>
 
 	<a href="#home" class="arrow"><i class="fa fa-arrow-circle-o-up fa-2x"></i></a>
 </section>
