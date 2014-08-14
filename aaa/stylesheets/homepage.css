@@ -255,7 +255,7 @@ i:hover{
 
 
 /* #### iPhone 4+ Portrait or Landscape #### */
-@media screen and (max-width: 480px) and (-webkit-min-device-pixel-ratio: 2){
+@media screen and (max-width: 480px) and (-webkit-min-device-pixel-ratio: 1.5), screen and (max-width: 480px) and (min-resolution: 1.5dppx){
 	h1 {
 		font-size: 2em;
 	}
@@ -289,7 +289,7 @@ i:hover{
 	}
 
 	section p {
-		font-size: .7em;
+		font-size: .75em;
 	}
 
 	footer {
@@ -298,13 +298,13 @@ i:hover{
 
 }
 
-@media screen and (min-width: 481px) and (max-width: 760px){
+@media screen and (min-width: 481px) and (max-width: 800px){
 	h1 {
-		font-size: 2.5em;
+		font-size: 2.6em;
 	}
 
 	h2 {
-		font-size: 1.3em;
+		font-size: 1.4em;
 	}
 
 	section#about {
@@ -320,11 +320,11 @@ i:hover{
 	}
 
 	section h3 {
-		font-size: 1em;
+		font-size: 1.1em;
 	}
 
 	nav li a {
-		font-size: 1em;
+		font-size: 1.1em;
 	}
 
 	section {
@@ -332,7 +332,7 @@ i:hover{
 	}
 
 	section p {
-		font-size: .9em;
+		font-size: .95em;
 	}
 
 	footer {
@@ -340,8 +340,8 @@ i:hover{
 	}
 }
 
-@media screen and (min-width: 1024px){
-   	h1 {
+@media screen and (min-width: 1024px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1024px) and (min-resolution: 2dppx),{
+	h1 {
 		font-size: 3em;
 	}
 
@@ -350,7 +350,7 @@ i:hover{
 	}
 
 	section h3 {
-		font-size: 1.1em;
+		font-size: 1.2em;
 	}
 
 	nav li a {
@@ -374,7 +374,7 @@ i:hover{
 	}
 
 	section p {
-		font-size: .9em;
+		font-size: 1em;
 	}
 
 	footer {
@@ -383,7 +383,7 @@ i:hover{
 }
 
 /* #### Tablets Portrait or Landscape #### */
-@media screen and (min-device-width: 768px) and (max-device-width: 1024px){
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-device-width: 768px) and (max-device-width: 1024px) and (min-resolution: 2dppx){
   	h1 {
 		font-size: 3em;
 	}
