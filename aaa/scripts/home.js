@@ -16,14 +16,14 @@ $(document).ready(function(){
 $("#menu a").click(function(event){
   event.preventDefault();
   var section = $(this).attr('href');
-  $('html, body').animate({scrollTop: $(section).offset().top - 100}, 1500);
+  $('body').animate({scrollTop: $(section).offset().top - 100}, 1500);
 
 });
 
 //animated scroll to top
 $("a.arrow").click(function(event){
   event.preventDefault();
-  $('html, body').animate({scrollTop: 0}, 1500);
+  $('body').animate({scrollTop: 0}, 1500);
 
 });
 

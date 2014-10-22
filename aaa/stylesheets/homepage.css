@@ -20,8 +20,6 @@ h1 {
 	text-transform: uppercase;
 	font-size: 3.5em;
 	color: rgba(255,255,255,0.9);
-	-webkit-animation: blurFadeIn 2s ease-in 1s backwards;
-	-moz-animation: blurFadeIn 2s ease-in 1s backwards;
 }
 
 h2 {
@@ -76,7 +74,7 @@ span.italic {
 
 footer {
 	height: 20vh;
-	background: darkblue;
+	background: black;
 	color: white;
 	width: 100%;
 	text-align: center;
@@ -145,7 +143,7 @@ footer {
   -webkit-align-items: center;
 }
 
-	/** full width image container **/
+	/** top main container **/
 	#hero {
 		flex: 60%;
 		-webkit-flex: 60vh;
@@ -157,14 +155,32 @@ footer {
 		justify-content: center;
 		-webkit-justify-content: center;
 	}
-		#name{
-			width: 100%;
-			display: flex;
+		.name-container {
 			display: -webkit-flex;
-			flex-direction: row;
-			-webkit-flex-direction: row;
-			justify-content: space-around;
-			-webkit-justify-content: space-around;
+			display: flex;
+			-webkit-flex-direction: column;
+			flex-direction: column;
+			-webkit-justify-content: center;
+			justify-content: center;
+		}
+
+			#name{
+				width: 100%;
+				display: flex;
+				display: -webkit-flex;
+				flex-direction: row;
+				-webkit-flex-direction: row;
+				justify-content: space-around;
+				-webkit-justify-content: space-around;
+			}
+
+		.avatar-frame img{
+			width: 150px;
+			height: 200px;
+			border: 2px solid white;
+			-webkit-border-radius: 200px; /* Saf3+, Chrome */
+			border-radius: 200px; /* Opera 10.5, IE 9 */
+			/*-moz-border-radius: 30px;  Disabled for FF1+ */
 		}
 
 	#bottom-nav, #top{
@@ -264,6 +280,11 @@ i:hover{
 		font-size: 1.1em;
 	}
 
+	.avatar-frame img {
+		width: 110px;
+		height: 140px;
+	}
+
 	section#about {
 		height: 100vh;
 	}
@@ -305,6 +326,11 @@ i:hover{
 
 	h2 {
 		font-size: 1.4em;
+	}
+
+	.avatar-frame img {
+		width: 130px;
+		height: 180px
 	}
 
 	section#about {
